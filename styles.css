@@ -86,18 +86,31 @@ nav .left a{
 .project-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 
 .project-card{
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    padding: 25px;
+    border-radius: 20px;
+    padding: 20px;
+
 }
 
 .project-card h3{
     color: var(--link-color);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+    max-height: 500px;
 }
 
 /*Resume*/
