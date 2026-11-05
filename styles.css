@@ -278,3 +278,101 @@ nav .left a{
         padding: 50px 20px;
     }
 }
+/* Assignment 2 Server Section */
+
+.server-projects {
+    margin-top: 50px;
+}
+
+.server-projects h2 {
+    margin-bottom: 10px;
+}
+
+.server-projects p {
+    margin-bottom: 15px;
+}
+
+
+/* Buttons */
+
+button {
+    background-color: var(--link-color);
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 10px 18px;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* Loaded Projects */
+
+#projectList {
+    margin-top: 20px;
+}
+
+.loaded-project {
+    background-color: white;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+}
+
+.loaded-project h3 {
+    color: var(--link-color);
+}
+
+
+/* Form Section */
+
+.project-form-section {
+    margin-top: 50px;
+}
+
+.project-form-section h2 {
+    margin-bottom: 10px;
+}
+
+.project-form-section p {
+    margin-bottom: 15px;
+}
+
+#projectForm {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    max-width: 500px;
+}
+
+#projectForm input {
+    padding: 10px;
+
+    border: 1px solid #aaa;
+    border-radius: 6px;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+}
+
+#formResponse {
+    margin-top: 15px;
+
+    color: var(--link-color);
+
+    font-weight: 600;
+}

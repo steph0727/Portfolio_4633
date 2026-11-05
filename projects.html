@@ -29,28 +29,112 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
     </div>
-
+    
     <main>
-        <section class="page-section">
-            <div class="page-header">
-                <h1>Projects</h1>
-            </div>
 
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="portfolioImages/FamiliaSimi.jpg" alt="FamiliaSimi" class="ApplicationScreenshot">
-                    <div class="project-card-content">
-                        <h3>Family Health Dashboard</h3>
-                        <p>
-The Family Health Dashboard is a cross-platform mobile application prototype designed to provide families with a centralized and accessible way to manage health information. Built using React Native, JavaScript, and Expo, the application allows users to manage multiple family member profiles, track prescriptions, locate nearby healthcare facilities, and access important medical information from one place.
-<br><br>The application incorporates features such as prescription and medical document scanning, English-Spanish translation, simplified explanations of medical terminology, and location-based clinic searches. The interface was designed with accessibility and ease of use in mind, particularly for situations where users need to quickly access or understand health information.
-<br><br>Technologies: React Native, JavaScript, Expo, Camera/OCR API, Translation API, Maps/Location API.</p>
-                    </div>
+    <section class="page-section">
+
+        <div class="page-header">
+            <h1>Projects</h1>
+        </div>
+
+
+        <!-- EXISTING PROJECT -->
+        <div class="project-grid">
+
+            <div class="project-card">
+
+                <img
+                    src="portfolioImages/FamiliaSimi.jpg"
+                    alt="FamiliaSimi"
+                    class="ApplicationScreenshot"
+                >
+
+                <div class="project-card-content">
+
+                    <h3>Family Health Dashboard</h3>
+
+                    <p>
+                        The Family Health Dashboard is a
+                        cross-platform mobile application prototype designed to provide families with a centralized and accessible way to manage health information. Built using React Native, JavaScript, and Expo, the application allows users to manage multiple family member profiles, track prescriptions, locate nearby healthcare facilities, and access important medical information from one place.
+                        <br><br>The application incorporates features such as prescription and medical document scanning, English-Spanish translation, simplified explanations of medical terminology, and location-based clinic searches. The interface was designed with accessibility and ease of use in mind, particularly for situations where users need to quickly access or understand health information.
+                        <br><br>Technologies: React Native, JavaScript, Expo, Camera/OCR API, Translation API, Maps/Location API.
+                    </p>
+
                 </div>
 
             </div>
-        </section>
-    </main>
 
-</body>
-</html>
+        </div>
+
+
+        <!-- SERVER DATA SECTION -->
+
+        <div class="server-projects">
+
+            <h2>Projects From Server</h2>
+
+            <p>
+                Click the button below to load project
+                information from the server.
+            </p>
+
+            <button id="loadProjectsButton">
+                Load Projects
+            </button>
+
+            <div id="projectList"></div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="project-form-section">
+
+            <h2>Project Interest Form</h2>
+
+            <p>
+                Enter your name and the project you are
+                interested in.
+            </p>
+
+            <form id="projectForm">
+
+                <label for="name">
+                    Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
+
+                <label for="project">
+                    Project:
+                </label>
+
+                <input
+                    type="text"
+                    id="project"
+                    name="project"
+                    required
+                >
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+            <p id="formResponse"></p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
