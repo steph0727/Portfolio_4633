@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">My Portfolio</a>
+        <a href="projects.html">View Projects</a>
+    </nav>
+
+   <main class="page-section" id="adminContent" hidden>
+        <h1>Admin Dashboard</h1>
+        <p>Manage your portfolio projects here.</p>
+
+        <section>
+            <h2>Project Management</h2>
+
+            <button type="button" id="addProjectBtn">
+                Add New Project
+            </button>
+
+            <div id="projectList">
+                <!-- Projects will appear here -->
+            </div>
+        </section>
+
+        <button id="logoutBtn" type="button">
+    Log Out
+</button>
+    </main>
+
+    
+<script type="module">
+    import { userManager, signOutRedirect } from "./main.js";
+  document.getElementById("logoutBtn")
+    .addEventListener("click", async () => {
+        try {
+            await signOutRedirect();
+        } catch (error) {
+            console.error("Logout failed:", error);
+        }
+    });
+    try {
+        const user = await userManager.getUser();
+
+        if (!user || user.expired) {
+            window.location.replace("./login.html");
+        } else {
+            console.log("Authenticated session found!");
+
+            document.getElementById("adminContent").hidden = false;
+        }
+    } catch (error) {
+        console.error("Session check failed:", error);
+        window.location.replace("./login.html");
+    }
+</script>
+
+</body>
+</html>

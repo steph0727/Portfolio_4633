@@ -27,7 +27,8 @@ async function loadProjects() {
 
             projectCard.innerHTML = `
                 <h3>${project.name}</h3>
-                <p>Technology: ${project.technology}</p>
+                <p>${project.description}</p>
+                <p><strong>Technologies</strong>: ${project.technology}</p>
             `;
 
             projectList.appendChild(projectCard);

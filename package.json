@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "oidc-client-ts": "^3.5.0"
+  },
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "admin.js",
+  "devDependencies": {
+    "vite": "^8.3.6"
+  },
+  "scripts": {
+  "dev": "vite --host 127.0.0.1 --port 5500 --strictPort",
+  "build": "vite build",
+  "preview": "vite preview"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steph0727/Portfolio_4633.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steph0727/Portfolio_4633/issues"
+  },
+  "homepage": "https://github.com/steph0727/Portfolio_4633#readme"
+}
