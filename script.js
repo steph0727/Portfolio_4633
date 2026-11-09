@@ -30,7 +30,6 @@ async function loadProjects() {
                 <p>${project.description}</p>
                 <p><strong>Technologies</strong>: ${project.technology}</p>
             `;
-
             projectList.appendChild(projectCard);
         });
 
