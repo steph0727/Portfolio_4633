@@ -17,6 +17,7 @@
 
    <main class="page-section" id="adminContent" hidden>
         <h1>Admin Dashboard</h1>
+        <h2 id="welcomeMessage"></h2>
         <p>Manage your portfolio projects here.</p>
 
         <section>
@@ -47,20 +48,31 @@
             console.error("Logout failed:", error);
         }
     });
-    try {
-        const user = await userManager.getUser();
+    
+try {
+    const user = await userManager.getUser();
 
-        if (!user || user.expired) {
-            window.location.replace("./login.html");
-        } else {
-            console.log("Authenticated session found!");
-
-            document.getElementById("adminContent").hidden = false;
-        }
-    } catch (error) {
-        console.error("Session check failed:", error);
+    if (!user || user.expired) {
         window.location.replace("./login.html");
+    } else {
+        console.log("Authenticated session found!");
+
+        // Get the logged-in user's email
+        const name = user.profile.email;
+
+        // Display a personalized welcome message
+        document.getElementById("welcomeMessage").textContent =
+            `Hello, ${name}!`;
+
+        // Display the dashboard
+        document.getElementById("adminContent").hidden = false;
     }
+
+} catch (error) {
+    console.error("Session check failed:", error);
+    window.location.replace("./login.html");
+}
+
 </script>
 
 </body>
